@@ -1,4 +1,8 @@
-Install SQL Server, Microsoft SQL Management Studio, .NET 7
+Install SQL Server Management Studio for Microsoft SQL .NET 7
 
-Build and run project, database must be migrate automatically in localhost (Windows Auth)
-If is not happen enter terminal in URLShortener.WebApi type: "dotnet ef database update"
+Creating and running a project: the database should be automatically created in localhost (Windows Auth) after the first run project
+If this does not happen, type terminal in URLShortener.WebApi for example: "dotnet ef database update"
+
+Angular:
+
+On the path "URLShorter/URLShortener.WebApi/Angular" enter: "npm install", to build and, "ng run" to run
