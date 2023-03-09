@@ -1,0 +1,62 @@
+﻿@inject IHttpContextAccessor ContextAccessor;
+
+@model SignForm
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+  <h2>Welcome to URL Shortered</h2>
+  <div class="buttons-container">
+    @if (ContextAccessor.HttpContext.Session.GetString("Id") != null && ContextAccessor.HttpContext.Session.GetString("Name") != null)
+    {
+      @if (ContextAccessor.HttpContext.Session.Get("IsAdmin") != null)
+      {
+        <span>Logged admin @ContextAccessor.HttpContext.Session.GetString("Name")!</span>
+      }
+      else
+      {
+        <span>Logged user, @ContextAccessor.HttpContext.Session.GetString("Name")!</span>
+      }
+      <a class="exit-page" asp-area="" asp-controller="Auth" asp-action="Logout">
+        <button class="sign-out-button" id="btn-logout">Sign out</button>
+      </a>
+    }
+    else
+    {
+        <a class="signup-page" asp-area="" asp-controller="Register" asp-action="SignUp">
+          <button class="signup-button" id="btn-signup">Sign Up</button>
+        </a>
+        <a class="login-page" asp-area="" asp-controller="Auth" asp-action="Login">
+          <button class="login-button" id="btn-login">Log In</button>
+        </a>
+    }
+  </div>
+
+  <style>
+      .buttons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+    .sign-out-button,
+    .signup-button,
+    .login-button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+      .sign-out-button:hover,
+      .signup-button:hover,
+      .login-button:hover {
+        background-color: navy;
+      }
+    </style>
+</div>

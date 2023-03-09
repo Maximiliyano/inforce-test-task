@@ -1,0 +1,54 @@
+﻿@inject IHttpContextAccessor ContextAccessor;
+
+@using URLShortener.WebApi.Services
+@model IEnumerable<URLShortener.WebApi.Models.UrlInfoDto>
+
+@{
+    ViewData["Title"] = "ViewTable";
+}
+
+<h1>ViewTable</h1>
+
+<p>
+    @if (ContextAccessor.HttpContext.Session.GetString("Id") != null && ContextAccessor.HttpContext.Session.GetString("Name") != null)
+    {
+        <a asp-action="Create">Add new Url</a>
+    }
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OriginalString)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortedString)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a href=@Html.DisplayFor(modelItem => item.OriginalString)>@Html.DisplayFor(modelItem => item.OriginalString)</a>
+            </td>
+            <td>
+                <a href=@Html.DisplayFor(modelItem => item.OriginalString)>@Html.DisplayFor(modelItem => item.ShortedString)</a>
+            </td>
+            @if (ContextAccessor.HttpContext.Session.GetInt32("Id") != null && 
+                 ContextAccessor.HttpContext.Session.GetString("Name") != null)
+            {
+                if (item.CreatedBy == ContextAccessor.HttpContext.Session.GetString("Name"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                }// TODO admin will be change everything, user will be change ONLY own urls created by him
+            }
+        </tr>
+}
+    </tbody>
+</table>
