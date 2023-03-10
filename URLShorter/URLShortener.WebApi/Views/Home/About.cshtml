@@ -1,13 +1,21 @@
 ﻿@inject IHttpContextAccessor ContextAccessor;
 
 @using URLShortener.WebApi.Data
-@model dynamic
+
+@model URLShortener.WebApi.Models.About
 
 @{
     ViewData["Title"] = "About us";
+    ViewData["Message"] = ContextAccessor.HttpContext.Session.GetString("AboutMessage") ?? "An URL shortening algorithm in ASP.NET MVC Core typically involves generating a shorter unique identifier for a given URL and storing it in a database. When a user accesses the shortened URL, the application retrieves the original URL from the database and redirects the user to the original URL.";
 
     var userRole = ContextAccessor.HttpContext.Session.GetString("Role");
-    // TODO Edit about
+    /*
+    <form asp-action="Edit">
+        <div class="form-group">
+            <input type="submit" value="Edit" class="btn btn-primary"/>
+        </div>
+    </form>
+    */
 }
 <h1>@ViewData["Title"]</h1>
 
@@ -17,9 +25,36 @@
     <div class="col-md-4">
         @if (userRole == StringConstants.Admin)
         {
-            <div class="form-group">
-                <input type="submit" value="Edit" class="btn btn-primary"/>
-            </div>
+            <form asp-action="Save">
+                <div class="form-group">
+                    <textarea id="editor">@ViewData["Message"]</textarea>
+                    <input type="text" value="Save" class="btn btn-primary"/>
+                    <button id="save" style="display: none;">Save</button>
+                    <div id="output"></div>
+                </div>
+            </form>
         }
     </div>
 </div>
+
+<script>
+  const editor = document.querySelector("#editor");
+  const editBtn = document.querySelector("#edit");
+  const saveBtn = document.querySelector("#save");
+  const output = document.querySelector("#output");
+
+  editBtn.addEventListener("click", function() {
+    editor.style.display = "block";
+    output.style.display = "none";
+    editBtn.style.display = "none";
+    saveBtn.style.display = "block";
+  });
+
+  saveBtn.addEventListener("click", function() {
+    editor.style.display = "none";
+    output.style.display = "block";
+    output.innerHTML = editor.value;
+    editBtn.style.display = "block";
+    saveBtn.style.display = "none";
+  });
+</script>

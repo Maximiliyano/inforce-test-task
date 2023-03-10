@@ -16,7 +16,7 @@ public class ShortUrlsTableController : Controller
     
     public async Task<IActionResult> ViewTable()
     {
-        return View(await _shortUrlsTableService.ViewTableWithShortUrls()); // TODO implement this page in angular
+        return View(await _shortUrlsTableService.ViewTableWithShortUrls()); // TODO rewrite this page in angular
     }
 
     public IActionResult Edit()

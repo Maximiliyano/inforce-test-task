@@ -7,10 +7,12 @@ namespace URLShortener.WebApi.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IHttpContextAccessor _contextAccessor;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IHttpContextAccessor contextAccessor)
         {
             _logger = logger;
+            _contextAccessor = contextAccessor;
         }
 
         public IActionResult Index()
@@ -20,7 +22,6 @@ namespace URLShortener.WebApi.Controllers
 
         public IActionResult About() // TODO admin will be edit this text
         {
-            ViewData["Message"] = "An URL shortening algorithm in ASP.NET MVC Core typically involves generating a shorter unique identifier for a given URL and storing it in a database. When a user accesses the shortened URL, the application retrieves the original URL from the database and redirects the user to the original URL.";
             return View();
         }
 
@@ -28,6 +29,13 @@ namespace URLShortener.WebApi.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public IActionResult Save(string about)
+        {
+            _contextAccessor.HttpContext.Session.SetString("AboutMessage", about);
+            return RedirectToAction("About");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using URLShortener.WebApi.Data;
 using URLShortener.WebApi.Extensions;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
@@ -32,6 +33,11 @@ public class Startup
         {
             opt.IdleTimeout = TimeSpan.FromMinutes(120);
         });
+        
+        /*services.AddSpaStaticFiles(configuration =>
+        {
+            configuration.RootPath = "ClientApp/dist";
+        });*/
     }
     
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -42,8 +48,18 @@ public class Startup
             app.UseHsts();
         }
         
+        /*app.UseStaticFiles(); // TODO connect angular
+        app.UseSpaStaticFiles();
+        app.UseSpa(spa =>
+        {
+            spa.Options.SourcePath = "/URLShorter/ClientApp";
+            if (env.IsDevelopment())
+            {
+                spa.UseAngularCliServer(npmScript: "start");
+            }
+        });*/
+
         app.UseHttpsRedirection();
-        app.UseStaticFiles();
         app.UseCookiePolicy();
 
         app.UseSession();

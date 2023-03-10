@@ -282,3 +282,11 @@ E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\Mi
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\FluentAssertions.dll
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\package-lock.json
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\ClientApp\angular.json
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\ClientApp\package-lock.json
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\ClientApp\package.json
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\ClientApp\tsconfig.app.json
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\ClientApp\tsconfig.json
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\bin\Debug\net7.0\ClientApp\tsconfig.spec.json
