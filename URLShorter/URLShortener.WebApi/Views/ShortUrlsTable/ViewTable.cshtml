@@ -1,15 +1,21 @@
 ﻿@inject IHttpContextAccessor ContextAccessor;
 
-@model IEnumerable<URLShortener.WebApi.Models.UrlInfoDto>
+@using URLShortener.WebApi.Data
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<URLShortener.WebApi.Data.Dtos.UrlInfoDto>
 
 @{
     ViewData["Title"] = "ViewTable";
+
+    var userId = ContextAccessor.HttpContext.Session.GetString("Id");
+    var userName = ContextAccessor.HttpContext.Session.GetString("Name");
+    var userRole = ContextAccessor.HttpContext.Session.GetString("Role");
 }
 
 <h1>ViewTable</h1>
 
 <p>
-    @if (ContextAccessor.HttpContext.Session.GetString("Id") != null && ContextAccessor.HttpContext.Session.GetString("Name") != null)
+    @if (userId != null && userName != null)
     {
         <a asp-action="Create">Add new Url</a>
     }
@@ -35,17 +41,18 @@
             <td>
                 <a href=@Html.DisplayFor(modelItem => item.OriginalString)>@Html.DisplayFor(modelItem => item.ShortedString)</a>
             </td>
-            @if (ContextAccessor.HttpContext.Session.GetInt32("Id") != null && 
-                 ContextAccessor.HttpContext.Session.GetString("Name") != null)
+            @if (userId != null && 
+                 userName != null)
             {
-                if (item.CreatedBy == ContextAccessor.HttpContext.Session.GetString("Name"))
+                if (item.CreatedBy == userName || 
+                    userRole == StringConstants.Admin)
                 {
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                         <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                         <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                     </td>
-                }// TODO admin will be change everything, user will be change ONLY own urls created by him
+                }
             }
         </tr>
 }

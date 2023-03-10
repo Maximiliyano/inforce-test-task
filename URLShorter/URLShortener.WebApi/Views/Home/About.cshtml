@@ -1,6 +1,25 @@
-﻿@{
+﻿@inject IHttpContextAccessor ContextAccessor;
+
+@using URLShortener.WebApi.Data
+@model dynamic
+
+@{
     ViewData["Title"] = "About us";
+
+    var userRole = ContextAccessor.HttpContext.Session.GetString("Role");
+    // TODO Edit about
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's URL shortener.</p>
+<p>@ViewData["Message"]</p>
+
+<div class="row">
+    <div class="col-md-4">
+        @if (userRole == StringConstants.Admin)
+        {
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-primary"/>
+            </div>
+        }
+    </div>
+</div>

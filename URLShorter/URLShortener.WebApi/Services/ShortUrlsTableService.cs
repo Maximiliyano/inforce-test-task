@@ -1,9 +1,7 @@
-﻿using System.Security.Policy;
-using Azure.Core;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using URLShortener.WebApi.Data;
+using URLShortener.WebApi.Data.Dtos;
 using URLShortener.WebApi.Helpers;
-using URLShortener.WebApi.Models;
 
 namespace URLShortener.WebApi.Services;
 
@@ -22,6 +20,7 @@ public class ShortUrlsTableService : BaseService
     public async Task<UrlInfoDto?> CreateShortedUrl(UrlInfoDto urlInfoDto)
     {
         var userName = _contextAccessor.HttpContext.Session.GetString("Name");
+        var name = userName ?? urlInfoDto.CreatedBy;
 
         var urlInfoEntity = await _context.UrlInfo.FirstOrDefaultAsync(u => u.OriginalString == urlInfoDto.OriginalString);
 
@@ -32,11 +31,12 @@ public class ShortUrlsTableService : BaseService
 
         var shortedString = ShortUrlHelper.ConcatString(urlInfoDto.OriginalString);
 
-        var urlInfo = BuildUrlInfoDto(urlInfoDto.OriginalString, shortedString, userName);
+        var urlInfo = BuildUrlInfoDto(urlInfoDto.OriginalString, shortedString, name);
 
         await _context.UrlInfo.AddAsync(urlInfo);
         await _context.SaveChangesAsync();
-        
+
+        urlInfo.Id = _context.UrlInfo.FirstAsync(u => u.CreatedBy == name).Id;
         return urlInfo;
     }
 
@@ -54,7 +54,24 @@ public class ShortUrlsTableService : BaseService
         
         return true;
     }
-    
+
+    public async Task<UrlInfoDto?> Update(UrlInfoDto urlInfoDto)
+    {
+        var entity = await _context.UrlInfo.FirstOrDefaultAsync(u => u.Id == urlInfoDto.Id);
+        var entity1 = await _context.UrlInfo.FirstOrDefaultAsync(u => u.OriginalString == urlInfoDto.OriginalString);
+
+        if (entity is null || entity1 is not null)
+            return null;
+
+        entity.UpdatedAt = DateTime.Now;
+        entity.OriginalString = urlInfoDto.OriginalString;
+        entity.ShortedString = ShortUrlHelper.ConcatString(urlInfoDto.OriginalString);
+
+        await _context.SaveChangesAsync();
+
+        return entity;
+    }
+
     public async Task<UrlInfoDto?> GetById(int id) =>
         await _context.UrlInfo.FirstOrDefaultAsync(u => u.Id == id);
     

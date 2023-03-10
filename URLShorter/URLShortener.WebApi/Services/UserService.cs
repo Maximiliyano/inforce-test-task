@@ -35,7 +35,7 @@ public class UserService : BaseService
         return user;
     }
 
-    private async Task<UserDto> GetUser(string email)
+    public async Task<UserDto> GetUserByEmail(string email)
     {
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
 

@@ -8,10 +8,13 @@
     ".NETCoreApp,Version=v7.0": {
       "URLShortener.Tests/1.0.0": {
         "dependencies": {
+          "FluentAssertions": "6.10.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "7.0.3",
           "Microsoft.NET.Test.Sdk": "17.3.2",
           "NUnit": "3.13.3",
           "NUnit.Analyzers": "3.3.0",
           "NUnit3TestAdapter": "4.2.1",
+          "RestSharp": "109.0.0-preview.2",
           "URLShortener.WebApi": "1.0.0",
           "coverlet.collector": "3.1.2"
         },
@@ -65,6 +68,17 @@
         }
       },
       "coverlet.collector/3.1.2": {},
+      "FluentAssertions/6.10.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/FluentAssertions.dll": {
+            "assemblyVersion": "6.10.0.0",
+            "fileVersion": "6.10.0.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -978,6 +992,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/7.0.3": {},
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.3": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "7.0.3.0",
+            "fileVersion": "7.0.323.6302"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/7.0.3": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.3",
@@ -2289,6 +2314,7 @@
       "URLShortener.WebApi/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
+          "FluentAssertions": "6.10.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3",
@@ -2334,6 +2360,13 @@
       "sha512": "sha512-wuLDIDKD5XMt0A7lE31JPenT7QQwZPFkP5rRpdJeblyXZ9MGLI8rYjvm5fvAKln+2/X+4IxxQDxBtwdrqKNLZw==",
       "path": "coverlet.collector/3.1.2",
       "hashPath": "coverlet.collector.3.1.2.nupkg.sha512"
+    },
+    "FluentAssertions/6.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Da3YsiRDnOHKBfxutjnupL1rOX0K/jnG6crn5AgwukeqZ/yi+HNCOFshic01ke0ztZFWzpfQMXH8fO9aAbG0Gw==",
+      "path": "fluentassertions/6.10.0",
+      "hashPath": "fluentassertions.6.10.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -2565,6 +2598,13 @@
       "sha512": "sha512-CLyRWFLwaOUZNPEia/aBMzFxZqm/ITKt3B+yUFtrg4Ys5VF3n2gvneuItC9IhpeOcjfdSgu/yUKf8y/IsNHs5A==",
       "path": "microsoft.entityframeworkcore.analyzers/7.0.3",
       "hashPath": "microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-II0TxiTXwUaHYcn4qlC+GgcrkZaZdjgfHEIfWkPJe84YOVBNshdfBEkeGnVT+n70RKOj+1NyplGo9h22jVGSWA==",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.3",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.7.0.3.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/7.0.3": {
       "type": "package",

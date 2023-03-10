@@ -19,4 +19,6 @@ public sealed class SignForm
     [Compare("Password", ErrorMessage = "Confirm your password")]
     [DataType(DataType.Password)]
     public string ConfirmPassword { get; set; }
+    
+    public bool IsAdmin { get; set; }
 }

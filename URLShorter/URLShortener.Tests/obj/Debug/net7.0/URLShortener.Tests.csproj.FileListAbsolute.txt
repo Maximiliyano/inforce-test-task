@@ -100,12 +100,6 @@ E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\obj\Debug\net7.0\ref
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\CoverletSourceRootsMapping
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\URLShortener.WebApi.deps.json
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\URLShortener.WebApi.runtimeconfig.json
-E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\angularapps\angular.json
-E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\angularapps\package-lock.json
-E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\angularapps\package.json
-E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\angularapps\tsconfig.app.json
-E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\angularapps\tsconfig.json
-E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\angularapps\tsconfig.spec.json
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\appsettings.Development.json
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\appsettings.json
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\URLShortener.WebApi.staticwebassets.runtime.json
@@ -357,3 +351,5 @@ E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\run
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\URLShortener.WebApi.dll
 E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\URLShortener.WebApi.pdb
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
+E:\Local\C#\inforce-test-task\URLShorter\URLShortener.Tests\bin\Debug\net7.0\FluentAssertions.dll

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+W0/h3D+Id78DjwoBUZt1eehoRXtTyduqQc/KL3oWNTTDTESQFVp6/733nVmvOXjNeiTJTCXFw1VSjphNUIV4Q==",
+  "dgSpecHash": "mXUX+sOW2bnpmHYTqCfmyyx/LWKBSuPXG8h3DQkj+y7Q26Ezjrv0M0BZHrOmhJlqSGpJroRW9jK3QW4iVfU6FQ==",
   "success": true,
   "projectFilePath": "E:\\Local\\C#\\inforce-test-task\\URLShorter\\URLShortener.WebApi\\URLShortener.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maxim\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\maxim\\.nuget\\packages\\fluentassertions\\6.10.0\\fluentassertions.6.10.0.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.3\\microsoft.aspnetcore.cryptography.internal.7.0.3.nupkg.sha512",
     "C:\\Users\\maxim\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.3\\microsoft.aspnetcore.cryptography.keyderivation.7.0.3.nupkg.sha512",

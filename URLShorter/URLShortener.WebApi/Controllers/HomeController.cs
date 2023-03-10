@@ -20,6 +20,7 @@ namespace URLShortener.WebApi.Controllers
 
         public IActionResult About() // TODO admin will be edit this text
         {
+            ViewData["Message"] = "An URL shortening algorithm in ASP.NET MVC Core typically involves generating a shorter unique identifier for a given URL and storing it in a database. When a user accesses the shortened URL, the application retrieves the original URL from the database and redirects the user to the original URL.";
             return View();
         }
 

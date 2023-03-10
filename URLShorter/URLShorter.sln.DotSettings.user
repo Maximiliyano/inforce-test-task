@@ -1,6 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=590a1456_002D7809_002D4671_002D8bf5_002D678652897aa9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="AuthTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cc8efbd7_002Dba94_002D4df6_002D98fb_002Dd57d643c40f6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UserTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::6D47A9CD-7C24-4F48-BE4A-B18F26222F00::net7.0::URLShortener.Tests.UnitTests.AuthTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::6D47A9CD-7C24-4F48-BE4A-B18F26222F00::net7.0::URLShortener.Tests.UnitTests.UserTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

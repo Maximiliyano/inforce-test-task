@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using URLShortener.WebApi.Data.Dtos;
 using URLShortener.WebApi.Models;
 using URLShortener.WebApi.Services;
 
@@ -18,7 +19,7 @@ public class ShortUrlsTableController : Controller
         return View(await _shortUrlsTableService.ViewTableWithShortUrls()); // TODO implement this page in angular
     }
 
-    public IActionResult Edit() // TODO edit
+    public IActionResult Edit()
     {
         return View();
     }
@@ -58,12 +59,26 @@ public class ShortUrlsTableController : Controller
         await _shortUrlsTableService.Delete(int.Parse(id));
         return Index();
     }
-
-    [HttpPost]
-    public async Task<IActionResult> Details(int id) // TODO get correct id
+    
+    [HttpGet]
+    public async Task<IActionResult> Details(int id)
     {
         var urlInfoDto = await _shortUrlsTableService.GetById(id);
         return View(urlInfoDto);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Edit(UrlInfoDto urlInfoDto)
+    {
+        var updatedEntity = await _shortUrlsTableService.Update(urlInfoDto);
+
+        if (updatedEntity is null)
+        {
+            ModelState.AddModelError("", "This url is exist in system!");
+            return View();
+        }
+        
+        return Index();
     }
 
     public IActionResult Index()

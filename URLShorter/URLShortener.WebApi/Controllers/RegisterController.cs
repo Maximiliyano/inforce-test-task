@@ -7,11 +7,13 @@ namespace URLShortener.WebApi.Controllers;
 public class RegisterController : Controller
 {
     private readonly UserService _userService;
+    private readonly AuthService _authService;
     private readonly IHttpContextAccessor _session;
 
-    public RegisterController(UserService userService, IHttpContextAccessor contextAccessor)
+    public RegisterController(UserService userService, AuthService authService, IHttpContextAccessor contextAccessor)
     {
         _userService = userService;
+        _authService = authService;
         _session = contextAccessor;
     }
 
@@ -33,9 +35,7 @@ public class RegisterController : Controller
                 return View(signForm);
             }
             
-            _session.HttpContext.Session.SetInt32("Id", user.Id);
-            _session.HttpContext.Session.SetString("Name", user.Name);
-            
+            await _authService.SignInAsync(user);
             return RedirectToAction("Index", "Home");
         }
         return View(signForm);

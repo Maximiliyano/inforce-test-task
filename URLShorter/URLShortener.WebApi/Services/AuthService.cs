@@ -20,7 +20,7 @@ public class AuthService : BaseService
     {
         _session.HttpContext.Session.SetInt32("Id", userDto.Id);
         _session.HttpContext.Session.SetString("Name", userDto.Name);
-        _session.HttpContext.Session.Set("IsAdmin", BitConverter.GetBytes(userDto.IsAdmin));
+        _session.HttpContext.Session.SetString("Role", userDto.Role);
     }
 
     public async Task SignOutAsync()

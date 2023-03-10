@@ -1,9 +1,7 @@
 ﻿@inject ShortUrlsTableService ShortUrlsTableService;
-@inject UserService UserService;
-@inject IHttpContextAccessor ContextAccessor;
 
 @using URLShortener.WebApi.Services
-@model URLShortener.WebApi.Models.UrlInfoDto
+@model URLShortener.WebApi.Data.Dtos.UrlInfoDto
 
 @{
     ViewData["Title"] = "Details";
@@ -19,8 +17,7 @@
         </dt>
         <dd class="col-sm-10">
             @{
-                var userName = UserService.GetUserById((int)ContextAccessor.HttpContext.Session.GetInt32("Id")).Result.Name;
-                var urlInfoDto = await ShortUrlsTableService.GetById(@Model.Id);
+                var urlInfoDto = await ShortUrlsTableService.GetById(Model.Id);
             }
             <span>
                 @urlInfoDto.CreatedAt
@@ -55,7 +52,7 @@
         </dt>
         <dd class="col-sm-10">
             <span>
-                @userName
+                @Model.CreatedBy
             </span>
         </dd>
     </dl>

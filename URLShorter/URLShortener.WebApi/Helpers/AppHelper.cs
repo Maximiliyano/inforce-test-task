@@ -1,8 +1,8 @@
-﻿using System.Security.Cryptography;
+﻿using URLShortener.WebApi.Data;
 
 namespace URLShortener.WebApi.Helpers;
 
-public class AppHelper
+public abstract class AppHelper
 {
     private static readonly Random Random = new();
 
@@ -20,13 +20,7 @@ public class AppHelper
 
         return new string(stringChars);
     }
-    
-    public static byte[] GetRandomBytes(int length = 32)
-    {
-        using var randomNumberGenerator = new RNGCryptoServiceProvider();
-        var salt = new byte[length];
-        randomNumberGenerator.GetBytes(salt);
 
-        return salt;
-    }
+    public static string GetRole(bool isAdmin) =>
+        isAdmin ? StringConstants.Admin : StringConstants.User;
 }

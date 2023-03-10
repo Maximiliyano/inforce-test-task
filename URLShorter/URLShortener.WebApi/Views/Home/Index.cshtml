@@ -1,45 +1,62 @@
 ﻿@inject IHttpContextAccessor ContextAccessor;
 
+@using URLShortener.WebApi.Data
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model SignForm
 
 @{
     ViewData["Title"] = "Home Page";
+  
+    var userId = ContextAccessor.HttpContext.Session.GetString("Id");
+    var userName = ContextAccessor.HttpContext.Session.GetString("Name");
+    var userRole = ContextAccessor.HttpContext.Session.GetString("Role");
 }
 
 <div class="text-center">
-  <h2>Welcome to URL Shortered</h2>
+  <h1 class="display-4">Welcome to URL Shortered</h1>
   <div class="buttons-container">
-    @if (ContextAccessor.HttpContext.Session.GetString("Id") != null && ContextAccessor.HttpContext.Session.GetString("Name") != null)
+    @if (userId != null && userName != null)
     {
-      if (ContextAccessor.HttpContext.Session.Get("IsAdmin") == BitConverter.GetBytes(true)) // TODO admin & user fix
+      if (userRole == StringConstants.Admin)
       {
-        <span>Logged admin, @ContextAccessor.HttpContext.Session.GetString("Name")!</span>
+        <span>You logged as admin, @userName!</span>
       }
       else
       {
-        <span>Logged user, @ContextAccessor.HttpContext.Session.GetString("Name")!</span>
+        <span>You logged as user, @userName!</span>
       }
-      <a class="exit-page" asp-area="" asp-controller="Auth" asp-action="Logout">
-        <button class="sign-out-button" id="btn-logout">Sign out</button>
-      </a>
+      <div>
+        <a class="exit-page" asp-area="" asp-controller="Auth" asp-action="Logout">
+          <button class="sign-out-button" id="btn-logout">Sign out</button>
+        </a>
+      </div>
     }
     else
     {
+      <div class="auth-buttons">
         <a class="signup-page" asp-area="" asp-controller="Register" asp-action="SignUp">
           <button class="signup-button" id="btn-signup">Sign Up</button>
         </a>
         <a class="login-page" asp-area="" asp-controller="Auth" asp-action="Login">
           <button class="login-button" id="btn-login">Log In</button>
         </a>
+      </div>
     }
   </div>
 
-  <style>
-      .buttons-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+  <style>  
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+    }
     
     .sign-out-button,
     .signup-button,
@@ -51,12 +68,12 @@
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
-      margin: 0 10px;
     }
-      .sign-out-button:hover,
-      .signup-button:hover,
-      .login-button:hover {
-        background-color: navy;
-      }
-    </style>
+    
+    .sign-out-button:hover,
+    .signup-button:hover,
+    .login-button:hover {
+      background-color: navy;
+    }
+  </style>
 </div>
