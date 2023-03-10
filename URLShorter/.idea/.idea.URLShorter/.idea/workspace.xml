@@ -8,7 +8,20 @@
     <projectFile profileName="https">URLShorter/URLShorter.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff081a0-72a3-47f2-b010-ae3b276ef812" name="Changes" comment="" />
+    <list default="true" id="dff081a0-72a3-47f2-b010-ae3b276ef812" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.URLShorter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.URLShorter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Services/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Views/ShortUrlsTable/ViewTable.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Views/ShortUrlsTable/ViewTable.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/ref/URLShortener.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/ref/URLShortener.WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/refint/URLShortener.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/refint/URLShortener.WebApi.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,11 +30,29 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4d8a61e84e0f6df19e7ec3c67425db9b41b32fbd116f23528a9d2e8116b19d/RazorView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/79d4c664adb42fcbd62e769f558c87b7271b53c2738a13d884bbfcf1e798766d/ISession.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9d1c7906533aea419fa4023145539c219e40eacbde752ddcc6e58d14df8925/TimeSpan.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a29a41e2a5f155c6a4aa89680cf4647cdfaf461525f344b2c3191449d4a711/AuthenticationProperties.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d3b35aba78af8938342254c9ab4da7b7362a691ccc71b3decaabd322fea44/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f91195dc1f983d6ec69125bd192fea551738920a3ae32077f21c5af5b9/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Controllers/AuthController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Controllers/AuthController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Controllers/AuthController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/URLShortener.WebApi/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Extensions/ServiceExtension.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Extensions/ServiceExtension.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Extensions/ServiceExtension.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/URLShortener.WebApi/Services/AuthService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Services/AuthService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Services/AuthService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Services/AuthService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Startup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/URLShortener.WebApi/Views/Auth/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Views/ShortUrlsTable/ViewTable.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Views/ShortUrlsTable/ViewTable.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -29,7 +60,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2MjrgPXo2xbaSSRD2GUo8dhg73S" />
   <component name="ProjectLevelVcsManager">
@@ -150,7 +181,7 @@
       <workItem from="1678355781246" duration="3817000" />
       <workItem from="1678369647184" duration="10738000" />
       <workItem from="1678381208566" duration="18711000" />
-      <workItem from="1678403204095" duration="1153000" />
+      <workItem from="1678403204095" duration="7932000" />
     </task>
     <servers />
   </component>
@@ -197,6 +228,20 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/URLShortener.WebApi/Views/Home/Index.cshtml</url>
+          <line>13</line>
+          <properties documentPath="E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\Views\Home\Index.cshtml" initialLine="17" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

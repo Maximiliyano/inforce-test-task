@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using URLShortener.WebApi.Data;
 using URLShortener.WebApi.Extensions;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
@@ -26,7 +25,6 @@ public class Startup
         
         services.RegisterCustomServices();
         services.RegisterCustomSingletons();
-        
         services.RegisterAuthentication();
         
         services.AddDistributedMemoryCache();
@@ -49,6 +47,9 @@ public class Startup
         app.UseCookiePolicy();
 
         app.UseSession();
+        
+        app.UseAuthentication();
+        app.UseAuthorization();
 
         app.UseRouting();
 

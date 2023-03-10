@@ -1,8 +1,7 @@
-﻿using System.Security.Claims;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using URLShortener.WebApi.Data;
+using URLShortener.WebApi.Data.Dtos;
 using URLShortener.WebApi.Models;
 
 namespace URLShortener.WebApi.Services;
@@ -11,31 +10,28 @@ public class AuthService : BaseService
 {
     private readonly IHttpContextAccessor _session;
 
-    public AuthService(UrlDbContext context, IHttpContextAccessor contextAccessor) : base(context)
+    public AuthService(
+        UrlDbContext context, IHttpContextAccessor contextAccessor) : base(context)
     {
         _session = contextAccessor;
     }
 
-    public async Task<IdentityResult> SignInAsync(LogForm dto)
+    public async Task SignInAsync(UserDto userDto)
     {
-        var userDto = await _context.Users.FirstOrDefaultAsync(u => 
-            u.Email == dto.Email && 
-            u.Password == dto.Password);
-
-        if (userDto is null)
-        {
-            return IdentityResult.Failed();
-        }
-
         _session.HttpContext.Session.SetInt32("Id", userDto.Id);
         _session.HttpContext.Session.SetString("Name", userDto.Name);
         _session.HttpContext.Session.Set("IsAdmin", BitConverter.GetBytes(userDto.IsAdmin));
-
-        return IdentityResult.Success;
     }
 
     public async Task SignOutAsync()
     {
-        // TODO sign out account
+        _session.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        _session.HttpContext.Session.Clear();
+    }
+
+    public async Task<UserDto?> ValidateUserCredentials(LogForm logForm)
+    {
+        var user = _context.Users.FirstOrDefault(u => u.Email == logForm.Email && u.Password == logForm.Password);
+        return user;
     }
 }

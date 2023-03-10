@@ -11,9 +11,9 @@
   <div class="buttons-container">
     @if (ContextAccessor.HttpContext.Session.GetString("Id") != null && ContextAccessor.HttpContext.Session.GetString("Name") != null)
     {
-      @if (ContextAccessor.HttpContext.Session.Get("IsAdmin") != null)
+      if (ContextAccessor.HttpContext.Session.Get("IsAdmin") == BitConverter.GetBytes(true)) // TODO admin & user fix
       {
-        <span>Logged admin @ContextAccessor.HttpContext.Session.GetString("Name")!</span>
+        <span>Logged admin, @ContextAccessor.HttpContext.Session.GetString("Name")!</span>
       }
       else
       {

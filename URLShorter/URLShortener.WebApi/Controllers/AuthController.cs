@@ -21,21 +21,20 @@ public class AuthController : Controller
     [HttpPost]
     public async Task<IActionResult> Login(LogForm model)
     {
-        if (!ModelState.IsValid)
-        {
+        if (!ModelState.IsValid) 
             return View(model);
-        }
-        
-        var result = await _authService.SignInAsync(model);
-        if (result.Succeeded)
+
+        var result = await _authService.ValidateUserCredentials(model);
+        if (result is not null)
         {
+            await _authService.SignInAsync(result);
             return RedirectToAction("Index", "Home");
         }
 
         ModelState.AddModelError("", "Invalid login attempt.");
         return View(model);
     }
-
+    
     public async Task<IActionResult> Logout()
     {
         await _authService.SignOutAsync();
