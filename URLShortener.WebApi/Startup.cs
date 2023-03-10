@@ -48,8 +48,8 @@ public class Startup
             app.UseHsts();
         }
         
-        /*app.UseStaticFiles(); // TODO connect angular
-        app.UseSpaStaticFiles();
+        app.UseStaticFiles();
+        /*app.UseSpaStaticFiles();// TODO connect angular
         app.UseSpa(spa =>
         {
             spa.Options.SourcePath = "/URLShorter/ClientApp";
