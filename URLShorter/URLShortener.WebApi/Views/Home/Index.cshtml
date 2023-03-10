@@ -1,7 +1,7 @@
 ﻿@inject IHttpContextAccessor ContextAccessor;
 
-@using URLShortener.WebApi.Data
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+@using URLShortener.WebApi.Enums
 @model SignForm
 
 @{
@@ -17,7 +17,7 @@
   <div class="buttons-container">
     @if (userId != null && userName != null)
     {
-      if (userRole == StringConstants.Admin)
+      if (userRole == UserRoles.Admin.ToString())
       {
         <span>You logged as admin, @userName!</span>
       }

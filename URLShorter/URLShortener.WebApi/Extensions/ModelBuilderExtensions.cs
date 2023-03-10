@@ -1,16 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using URLShortener.WebApi.Data;
 using URLShortener.WebApi.Data.Dtos;
+using URLShortener.WebApi.Enums;
 using URLShortener.WebApi.Helpers;
 
 namespace URLShortener.WebApi.Extensions;
 
 public static class ModelBuilderExtensions
 {
-    public static void Configure(this ModelBuilder modelBuilder)
-    {
-    }
-    
     public static void Seed(this ModelBuilder modelBuilder)
     {
         var users = BuildListWithUsersDto(10);
@@ -29,9 +26,9 @@ public static class ModelBuilderExtensions
         
         for (var i = 0; i < userCount; i++)
         {
-            users.Add(BuildUserDto(i, false));
+            users.Add(BuildUserDto(i, UserRoles.User));
         }
-        users.Add(BuildUserDto(userCount, true));
+        users.Add(BuildUserDto(userCount, UserRoles.Admin));
         
         return users;
     }
@@ -45,13 +42,13 @@ public static class ModelBuilderExtensions
             CreatedBy = $"{AppHelper.RandomizeCharacters(6)} {AppHelper.RandomizeCharacters(6)}"
         };
 
-    private static UserDto BuildUserDto(int id, bool permission) =>
+    private static UserDto BuildUserDto(int id, UserRoles roles) =>
         new()
         {
             Id = id + 1, 
             Name = $"First{AppHelper.RandomizeCharacters(4)} Sur{AppHelper.RandomizeCharacters(4)}",
             Email = $"{AppHelper.RandomizeCharacters(7).ToLower()}@gmail.com",
             Password = $"{AppHelper.RandomizeCharacters(6)}{AppHelper.RandomizeNumber(6)}",
-            Role = AppHelper.GetRole(permission)
+            Role = roles
         };
 }

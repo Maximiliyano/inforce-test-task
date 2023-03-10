@@ -39,7 +39,7 @@ namespace URLShortener.WebApi.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Role = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -51,11 +51,11 @@ namespace URLShortener.WebApi.Migrations
                 columns: new[] { "Id", "CreatedAt", "CreatedBy", "OriginalString", "ShortedString", "UpdatedAt" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6173), "MSPMQP YPPYAO", "https://mail.google.com/mail/u/0/?pli=1#inbox", "WR0kDa", new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6173) },
-                    { 2, new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6337), "ZABOYZ KCNQSK", "https://calendar.google.com/calendar/u/0/r", "8enV2d", new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6337) },
-                    { 3, new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6351), "HUJKTI QOTMHS", "https://github.com/Maximiliyano?tab=repositories", "LaGYOb", new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6351) },
-                    { 4, new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6362), "HMGWWD UOSWFW", "https://learnenglish.britishcouncil.org/", "jHaWHe", new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6362) },
-                    { 5, new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6372), "FKAPUY RZOXTE", "https://www.youtube.com/", "vFrUTd", new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6372) }
+                    { 1, new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1058), "PZPBUA IPOFQS", "https://mail.google.com/mail/u/0/?pli=1#inbox", "WR0kDa", new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1058) },
+                    { 2, new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1228), "UDOGWD NLAWVF", "https://calendar.google.com/calendar/u/0/r", "8enV2d", new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1228) },
+                    { 3, new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1245), "SIHFPW QYUWKY", "https://github.com/Maximiliyano?tab=repositories", "LaGYOb", new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1245) },
+                    { 4, new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1257), "YYXXUA YLWJEI", "https://learnenglish.britishcouncil.org/", "jHaWHe", new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1257) },
+                    { 5, new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1292), "UFCHOQ IPFVUV", "https://www.youtube.com/", "vFrUTd", new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1292) }
                 });
 
             migrationBuilder.InsertData(
@@ -63,17 +63,17 @@ namespace URLShortener.WebApi.Migrations
                 columns: new[] { "Id", "Email", "Name", "Password", "Role" },
                 values: new object[,]
                 {
-                    { 1, "obwupun@gmail.com", "FirstFVRJ SurLMGP", "WSFDEI34", "User" },
-                    { 2, "qkneiph@gmail.com", "FirstQACR SurTDEH", "DHWAJW91", "User" },
-                    { 3, "qdauoxa@gmail.com", "FirstLIDT SurXTYC", "UQYVJI8", "User" },
-                    { 4, "jotiejp@gmail.com", "FirstWLWZ SurCIRX", "WLHXCY55", "User" },
-                    { 5, "vjfximq@gmail.com", "FirstAFDM SurMGCV", "KODZRO78", "User" },
-                    { 6, "aagdlpz@gmail.com", "FirstFDPT SurTMMP", "LWROWV14", "User" },
-                    { 7, "bouvxod@gmail.com", "FirstOAGF SurCVEZ", "WMMENU89", "User" },
-                    { 8, "qrrpesd@gmail.com", "FirstGZOY SurCRKA", "HDMYGF15", "User" },
-                    { 9, "ikzwdst@gmail.com", "FirstZTHK SurBEHS", "RBEZEF9", "User" },
-                    { 10, "dnzhimx@gmail.com", "FirstJZGR SurURTJ", "CDJAIO32", "User" },
-                    { 11, "wtbenti@gmail.com", "FirstDYNA SurRXEX", "ZGEBKZ6", "Admin" }
+                    { 1, "gkypnfp@gmail.com", "FirstYEAB SurDGJP", "XKEXHZ8", 0 },
+                    { 2, "talgfne@gmail.com", "FirstVOYL SurREBK", "LISTAS61", 0 },
+                    { 3, "qyijlfl@gmail.com", "FirstXCWK SurPUIJ", "TDAKRQ92", 0 },
+                    { 4, "odptzew@gmail.com", "FirstBGPI SurHYDU", "RZSZWL70", 0 },
+                    { 5, "pdnjhgv@gmail.com", "FirstNMZH SurACYI", "DEDDQV70", 0 },
+                    { 6, "vqrocnl@gmail.com", "FirstUILR SurXOHI", "YVXKHW95", 0 },
+                    { 7, "kpwiwsb@gmail.com", "FirstOYVZ SurKEVQ", "LKMVWP94", 0 },
+                    { 8, "naaptqo@gmail.com", "FirstNYJJ SurWXDQ", "GJAQNN94", 0 },
+                    { 9, "rtxvyci@gmail.com", "FirstGSYE SurWPHU", "URJKUW83", 0 },
+                    { 10, "xcaacpa@gmail.com", "FirstNBBU SurXOSN", "CWPLAI41", 0 },
+                    { 11, "rabonil@gmail.com", "FirstBOUU SurDJTG", "YLYRNQ53", 1 }
                 });
         }
 

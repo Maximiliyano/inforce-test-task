@@ -1,4 +1,6 @@
-﻿namespace URLShortener.WebApi.Data.Dtos;
+﻿using URLShortener.WebApi.Enums;
+
+namespace URLShortener.WebApi.Data.Dtos;
 
 public class UserDto
 {
@@ -10,5 +12,5 @@ public class UserDto
     
     public string Password { get; set; }
     
-    public string Role { get; set; }
+    public UserRoles Role { get; set; }
 }

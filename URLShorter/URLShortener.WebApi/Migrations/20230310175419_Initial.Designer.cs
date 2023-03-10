@@ -12,7 +12,7 @@ using URLShortener.WebApi.Data;
 namespace URLShortener.WebApi.Migrations
 {
     [DbContext(typeof(UrlDbContext))]
-    [Migration("20230310160312_Initial")]
+    [Migration("20230310175419_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -59,47 +59,47 @@ namespace URLShortener.WebApi.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6173),
-                            CreatedBy = "MSPMQP YPPYAO",
+                            CreatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1058),
+                            CreatedBy = "PZPBUA IPOFQS",
                             OriginalString = "https://mail.google.com/mail/u/0/?pli=1#inbox",
                             ShortedString = "WR0kDa",
-                            UpdatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6173)
+                            UpdatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1058)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6337),
-                            CreatedBy = "ZABOYZ KCNQSK",
+                            CreatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1228),
+                            CreatedBy = "UDOGWD NLAWVF",
                             OriginalString = "https://calendar.google.com/calendar/u/0/r",
                             ShortedString = "8enV2d",
-                            UpdatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6337)
+                            UpdatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1228)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6351),
-                            CreatedBy = "HUJKTI QOTMHS",
+                            CreatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1245),
+                            CreatedBy = "SIHFPW QYUWKY",
                             OriginalString = "https://github.com/Maximiliyano?tab=repositories",
                             ShortedString = "LaGYOb",
-                            UpdatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6351)
+                            UpdatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1245)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6362),
-                            CreatedBy = "HMGWWD UOSWFW",
+                            CreatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1257),
+                            CreatedBy = "YYXXUA YLWJEI",
                             OriginalString = "https://learnenglish.britishcouncil.org/",
                             ShortedString = "jHaWHe",
-                            UpdatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6362)
+                            UpdatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1257)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6372),
-                            CreatedBy = "FKAPUY RZOXTE",
+                            CreatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1292),
+                            CreatedBy = "UFCHOQ IPFVUV",
                             OriginalString = "https://www.youtube.com/",
                             ShortedString = "vFrUTd",
-                            UpdatedAt = new DateTime(2023, 3, 10, 18, 3, 12, 476, DateTimeKind.Local).AddTicks(6372)
+                            UpdatedAt = new DateTime(2023, 3, 10, 19, 54, 19, 687, DateTimeKind.Local).AddTicks(1292)
                         });
                 });
 
@@ -123,9 +123,8 @@ namespace URLShortener.WebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -135,90 +134,90 @@ namespace URLShortener.WebApi.Migrations
                         new
                         {
                             Id = 1,
-                            Email = "obwupun@gmail.com",
-                            Name = "FirstFVRJ SurLMGP",
-                            Password = "WSFDEI34",
-                            Role = "User"
+                            Email = "gkypnfp@gmail.com",
+                            Name = "FirstYEAB SurDGJP",
+                            Password = "XKEXHZ8",
+                            Role = 0
                         },
                         new
                         {
                             Id = 2,
-                            Email = "qkneiph@gmail.com",
-                            Name = "FirstQACR SurTDEH",
-                            Password = "DHWAJW91",
-                            Role = "User"
+                            Email = "talgfne@gmail.com",
+                            Name = "FirstVOYL SurREBK",
+                            Password = "LISTAS61",
+                            Role = 0
                         },
                         new
                         {
                             Id = 3,
-                            Email = "qdauoxa@gmail.com",
-                            Name = "FirstLIDT SurXTYC",
-                            Password = "UQYVJI8",
-                            Role = "User"
+                            Email = "qyijlfl@gmail.com",
+                            Name = "FirstXCWK SurPUIJ",
+                            Password = "TDAKRQ92",
+                            Role = 0
                         },
                         new
                         {
                             Id = 4,
-                            Email = "jotiejp@gmail.com",
-                            Name = "FirstWLWZ SurCIRX",
-                            Password = "WLHXCY55",
-                            Role = "User"
+                            Email = "odptzew@gmail.com",
+                            Name = "FirstBGPI SurHYDU",
+                            Password = "RZSZWL70",
+                            Role = 0
                         },
                         new
                         {
                             Id = 5,
-                            Email = "vjfximq@gmail.com",
-                            Name = "FirstAFDM SurMGCV",
-                            Password = "KODZRO78",
-                            Role = "User"
+                            Email = "pdnjhgv@gmail.com",
+                            Name = "FirstNMZH SurACYI",
+                            Password = "DEDDQV70",
+                            Role = 0
                         },
                         new
                         {
                             Id = 6,
-                            Email = "aagdlpz@gmail.com",
-                            Name = "FirstFDPT SurTMMP",
-                            Password = "LWROWV14",
-                            Role = "User"
+                            Email = "vqrocnl@gmail.com",
+                            Name = "FirstUILR SurXOHI",
+                            Password = "YVXKHW95",
+                            Role = 0
                         },
                         new
                         {
                             Id = 7,
-                            Email = "bouvxod@gmail.com",
-                            Name = "FirstOAGF SurCVEZ",
-                            Password = "WMMENU89",
-                            Role = "User"
+                            Email = "kpwiwsb@gmail.com",
+                            Name = "FirstOYVZ SurKEVQ",
+                            Password = "LKMVWP94",
+                            Role = 0
                         },
                         new
                         {
                             Id = 8,
-                            Email = "qrrpesd@gmail.com",
-                            Name = "FirstGZOY SurCRKA",
-                            Password = "HDMYGF15",
-                            Role = "User"
+                            Email = "naaptqo@gmail.com",
+                            Name = "FirstNYJJ SurWXDQ",
+                            Password = "GJAQNN94",
+                            Role = 0
                         },
                         new
                         {
                             Id = 9,
-                            Email = "ikzwdst@gmail.com",
-                            Name = "FirstZTHK SurBEHS",
-                            Password = "RBEZEF9",
-                            Role = "User"
+                            Email = "rtxvyci@gmail.com",
+                            Name = "FirstGSYE SurWPHU",
+                            Password = "URJKUW83",
+                            Role = 0
                         },
                         new
                         {
                             Id = 10,
-                            Email = "dnzhimx@gmail.com",
-                            Name = "FirstJZGR SurURTJ",
-                            Password = "CDJAIO32",
-                            Role = "User"
+                            Email = "xcaacpa@gmail.com",
+                            Name = "FirstNBBU SurXOSN",
+                            Password = "CWPLAI41",
+                            Role = 0
                         },
                         new
                         {
                             Id = 11,
-                            Email = "wtbenti@gmail.com",
-                            Name = "FirstDYNA SurRXEX",
-                            Password = "ZGEBKZ6",
-                            Role = "Admin"
+                            Email = "rabonil@gmail.com",
+                            Name = "FirstBOUU SurDJTG",
+                            Password = "YLYRNQ53",
+                            Role = 1
                         });
                 });
 #pragma warning restore 612, 618

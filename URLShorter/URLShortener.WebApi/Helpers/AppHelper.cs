@@ -1,4 +1,4 @@
-﻿using URLShortener.WebApi.Data;
+﻿using URLShortener.WebApi.Enums;
 
 namespace URLShortener.WebApi.Helpers;
 
@@ -20,7 +20,7 @@ public abstract class AppHelper
 
         return new string(stringChars);
     }
-
-    public static string GetRole(bool isAdmin) =>
-        isAdmin ? StringConstants.Admin : StringConstants.User;
+    
+    public static UserRoles GetRole(bool isAdmin) =>
+        isAdmin ? UserRoles.Admin : UserRoles.User;
 }

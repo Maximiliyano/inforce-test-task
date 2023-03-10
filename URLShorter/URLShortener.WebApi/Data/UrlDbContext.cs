@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using URLShortener.WebApi.Data.Dtos;
-using URLShortener.WebApi.Models;
 using URLShortener.WebApi.Extensions;
 
 namespace URLShortener.WebApi.Data;
@@ -15,7 +14,6 @@ public class UrlDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Configure();
         modelBuilder.Seed();
     }
 }

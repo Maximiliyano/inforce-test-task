@@ -32,10 +32,15 @@ namespace URLShortener.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Save(string about)
+        public IActionResult Save(About about)
         {
-            _contextAccessor.HttpContext.Session.SetString("AboutMessage", about);
+            _contextAccessor.HttpContext.Session.SetString("AboutMessage", about.Text);
             return RedirectToAction("About");
+        }
+
+        public IActionResult Edit()
+        {
+            return View();
         }
     }
 }

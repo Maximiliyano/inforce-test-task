@@ -2,6 +2,7 @@
 
 @using URLShortener.WebApi.Data
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+@using URLShortener.WebApi.Enums
 @model IEnumerable<URLShortener.WebApi.Data.Dtos.UrlInfoDto>
 
 @{
@@ -45,7 +46,7 @@
                  userName != null)
             {
                 if (item.CreatedBy == userName || 
-                    userRole == StringConstants.Admin)
+                    userRole == UserRoles.Admin.ToString())
                 {
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

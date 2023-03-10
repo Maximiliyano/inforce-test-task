@@ -8,13 +8,11 @@ public class RegisterController : Controller
 {
     private readonly UserService _userService;
     private readonly AuthService _authService;
-    private readonly IHttpContextAccessor _session;
 
-    public RegisterController(UserService userService, AuthService authService, IHttpContextAccessor contextAccessor)
+    public RegisterController(UserService userService, AuthService authService)
     {
         _userService = userService;
         _authService = authService;
-        _session = contextAccessor;
     }
 
     public IActionResult SignUp()

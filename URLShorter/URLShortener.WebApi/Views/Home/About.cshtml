@@ -1,6 +1,7 @@
 ﻿@inject IHttpContextAccessor ContextAccessor;
 
 @using URLShortener.WebApi.Data
+@using URLShortener.WebApi.Enums
 
 @model URLShortener.WebApi.Models.About
 
@@ -23,14 +24,11 @@
 
 <div class="row">
     <div class="col-md-4">
-        @if (userRole == StringConstants.Admin)
+        @if (userRole == UserRoles.Admin.ToString())
         {
-            <form asp-action="Save">
+            <form asp-action="Edit">
                 <div class="form-group">
-                    <textarea id="editor">@ViewData["Message"]</textarea>
-                    <input type="text" value="Save" class="btn btn-primary"/>
-                    <button id="save" style="display: none;">Save</button>
-                    <div id="output"></div>
+                    <input type="submit" value="Edit" class="btn btn-primary"/>
                 </div>
             </form>
         }

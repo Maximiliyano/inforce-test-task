@@ -9,71 +9,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dff081a0-72a3-47f2-b010-ae3b276ef812" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/app/app-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/app/app.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/ClientApp/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/20230310160312_Initial.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/Models/About.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/Enums/UserRoles.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/URLShortener.WebApi/Views/Home/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.URLShorter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.URLShorter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/urlshorter.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/urlshorter.metadata.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/urlshorter.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/urlshorter.projects.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/URLShorter/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/URLShorter/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/URLShorter/FileContentIndex/09686166-a2e2-43fd-bab2-1997e402cc39.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/URLShorter/FileContentIndex/53e7623f-37b2-483f-b83a-240d2d6f61c4.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/URLShorter/FileContentIndex/7968fdbc-6e8e-4a88-9884-f0d944fca950.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/URLShorter/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/URLShorter/v17/.futdcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/URLShorter/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/URLShorter/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.Tests/obj/Debug/net7.0/URLShortener.Tests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.Tests/obj/Debug/net7.0/URLShortener.Tests.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.Tests/obj/Debug/net7.0/URLShortener.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.Tests/obj/Debug/net7.0/URLShortener.Tests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.Tests/obj/URLShortener.Tests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.Tests/obj/URLShortener.Tests.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.Tests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.Tests/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.Tests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.Tests/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.Tests/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Controllers/ShortUrlsTableController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Controllers/ShortUrlsTableController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/20230310113023_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/20230310160312_Initial.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/20230310113023_Initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Controllers/RegisterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Controllers/RegisterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Data/Dtos/UserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Data/Dtos/UserDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Data/StringConstants.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Data/UrlDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Data/UrlDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Extensions/ModelBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Extensions/ModelBuilderExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Helpers/AppHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Helpers/AppHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/20230310160312_Initial.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/20230310175419_Initial.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/20230310160312_Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/20230310175419_Initial.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/UrlDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Migrations/UrlDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/URLShortener.WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/URLShortener.WebApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Services/AuthService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Views/Home/About.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Views/Home/About.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/angularapps/.angular/cache/15.2.2/angular-webpack/7c78f56eecb6ed9056bf64ec287dbb23b3be323e/0.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/angularapps/.angular/cache/15.2.2/angular-webpack/7c78f56eecb6ed9056bf64ec287dbb23b3be323e/index.pack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/Views/ShortUrlsTable/ViewTable.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/Views/ShortUrlsTable/ViewTable.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/bin/Debug/net7.0/URLShortener.WebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/URLShortener.WebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/project.razor.vs.json" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/project.razor.vs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/ref/URLShortener.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/ref/URLShortener.WebApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/refint/URLShortener.WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/refint/URLShortener.WebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/URLShortener.WebApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/URLShortener.WebApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/URLShortener.WebApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/URLShortener.WebApi/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +54,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f91195dc1f983d6ec69125bd192fea551738920a3ae32077f21c5af5b9/UserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../BinaryStudioAcademy/projectstructure/CollectionsAndLinq.WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/URLShortener.WebApi/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Helpers/AppHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://E:/Local/C#/inforce-test-task/URLShorter/URLShortener.WebApi/Models/SignForm.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/URLShortener.WebApi/Services/AuthService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/URLShortener.WebApi/Views/Auth/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/URLShortener.WebApi/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
@@ -229,7 +192,8 @@
       <workItem from="1678403204095" duration="16731000" />
       <workItem from="1678439514109" duration="21382000" />
       <workItem from="1678462443644" duration="1400000" />
-      <workItem from="1678464133371" duration="3263000" />
+      <workItem from="1678464133371" duration="4632000" />
+      <workItem from="1678469558076" duration="1346000" />
     </task>
     <servers />
   </component>
@@ -278,6 +242,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/URLShortener.WebApi/Controllers/HomeController.cs</url>
+          <line>36</line>
+          <properties documentPath="E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\Controllers\HomeController.cs" initialLine="36" containingFunctionPresentation="method 'Save'">
+            <startOffsets>
+              <option value="1069" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1144" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/URLShortener.WebApi/Controllers/AuthController.cs</url>
+          <line>26</line>
+          <properties documentPath="E:\Local\C#\inforce-test-task\URLShorter\URLShortener.WebApi\Controllers\AuthController.cs" initialLine="26" containingFunctionPresentation="method 'Login'">
+            <startOffsets>
+              <option value="573" />
+            </startOffsets>
+            <endOffsets>
+              <option value="636" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

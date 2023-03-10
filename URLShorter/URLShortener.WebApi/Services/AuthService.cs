@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 using URLShortener.WebApi.Data;
 using URLShortener.WebApi.Data.Dtos;
 using URLShortener.WebApi.Models;
@@ -20,7 +21,7 @@ public class AuthService : BaseService
     {
         _session.HttpContext.Session.SetInt32("Id", userDto.Id);
         _session.HttpContext.Session.SetString("Name", userDto.Name);
-        _session.HttpContext.Session.SetString("Role", userDto.Role);
+        _session.HttpContext.Session.SetString("Role", userDto.Role.ToString());
     }
 
     public async Task SignOutAsync()
@@ -31,7 +32,7 @@ public class AuthService : BaseService
 
     public async Task<UserDto?> ValidateUserCredentials(LogForm logForm)
     {
-        var user = _context.Users.FirstOrDefault(u => u.Email == logForm.Email && u.Password == logForm.Password);
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == logForm.Email && u.Password == logForm.Password);
         return user;
     }
 }
