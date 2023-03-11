@@ -23,4 +23,10 @@ public abstract class AppHelper
     
     public static UserRoles GetRole(bool isAdmin) =>
         isAdmin ? UserRoles.Admin : UserRoles.User;
+
+    public static string DefaultAboutText() =>
+        "An URL shortening algorithm in ASP.NET MVC Core typically involves generating\"" +
+        "a shorter unique identifier for a given URL and storing it in a database. \"" +
+        "When a user accesses the shortened URL, the application retrieves the original URL from the database \"" +
+        "and redirects the user to the original URL.";
 }

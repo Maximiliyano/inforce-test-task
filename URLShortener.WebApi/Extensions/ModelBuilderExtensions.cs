@@ -3,6 +3,7 @@ using URLShortener.WebApi.Data;
 using URLShortener.WebApi.Data.Dtos;
 using URLShortener.WebApi.Enums;
 using URLShortener.WebApi.Helpers;
+using URLShortener.WebApi.Models;
 
 namespace URLShortener.WebApi.Extensions;
 
@@ -10,28 +11,31 @@ public static class ModelBuilderExtensions
 {
     public static void Seed(this ModelBuilder modelBuilder)
     {
-        var users = BuildListWithUsersDto(10);
+        var users = BuildListWithUsersDto();
         var urls = BuildListWithUrlInfo();
+        var about = new List<AboutDto>
+        {
+            new()
+            {
+                Id = 1,
+                Text = AppHelper.DefaultAboutText()
+            }
+        };
         
         modelBuilder.Entity<UserDto>().HasData(users);
         modelBuilder.Entity<UrlInfoDto>().HasData(urls);
+        modelBuilder.Entity<AboutDto>().HasData(about);
     }
 
     private static IEnumerable<UrlInfoDto> BuildListWithUrlInfo() =>
         ShortUrlHelper._sites.Select((t, i) => BuildUrlInfo(i, t)).ToList();
 
-    private static IEnumerable<UserDto> BuildListWithUsersDto(int userCount)
-    {
-        var users = new List<UserDto>();
-        
-        for (var i = 0; i < userCount; i++)
+    private static IEnumerable<UserDto> BuildListWithUsersDto() =>
+        new List<UserDto>
         {
-            users.Add(BuildUserDto(i, UserRoles.User));
-        }
-        users.Add(BuildUserDto(userCount, UserRoles.Admin));
-        
-        return users;
-    }
+            BuildUserDto(0, UserRoles.User),
+            BuildUserDto(1, UserRoles.Admin)
+        };
 
     private static UrlInfoDto BuildUrlInfo(int id, string array) =>
         new()

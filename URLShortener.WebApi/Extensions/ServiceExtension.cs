@@ -7,6 +7,7 @@ public static class ServiceExtension
 {
     public static void RegisterCustomServices(this IServiceCollection services)
     {
+        services.AddScoped<HomeService>();
         services.AddScoped<AuthService>();
         services.AddScoped<UserService>();
         services.AddScoped<ShortUrlsTableService>();

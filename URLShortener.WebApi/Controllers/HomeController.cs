@@ -1,18 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using URLShortener.WebApi.Data.Dtos;
+using URLShortener.WebApi.Helpers;
 using URLShortener.WebApi.Models;
+using URLShortener.WebApi.Services;
 
 namespace URLShortener.WebApi.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IHttpContextAccessor _contextAccessor;
+        private readonly HomeService _homeService;
 
-        public HomeController(ILogger<HomeController> logger, IHttpContextAccessor contextAccessor)
+        public HomeController(HomeService homeService)
         {
-            _logger = logger;
-            _contextAccessor = contextAccessor;
+            _homeService = homeService;
         }
 
         public IActionResult Index()
@@ -20,27 +21,41 @@ namespace URLShortener.WebApi.Controllers
             return View();
         }
 
-        public IActionResult About() // TODO admin will be edit this text
+        public IActionResult About()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
         [HttpPost]
-        public IActionResult Save(About about)
+        public async Task<IActionResult> Save(AboutDto aboutDto)
         {
-            _contextAccessor.HttpContext.Session.SetString("AboutMessage", about.Text);
+            var updatedEntity = await _homeService.UpdateAbout(aboutDto.Text);
+
+            if (updatedEntity is null)
+            {
+                ModelState.AddModelError("", "String couldn't to be empty!");
+                return RedirectToAction("Edit");
+            }
+
             return RedirectToAction("About");
         }
 
         public IActionResult Edit()
         {
             return View();
+        }
+
+        public async Task<IActionResult> Reset()
+        {
+            var entity = await _homeService.UpdateAbout(AppHelper.DefaultAboutText());
+
+            if (entity is not null)
+            {
+                return RedirectToAction("About");
+            }
+            
+            ModelState.AddModelError("", "String couldn't to be reset!");
+            return RedirectToAction("Edit");
         }
     }
 }
