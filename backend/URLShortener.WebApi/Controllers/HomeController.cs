@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 using URLShortener.WebApi.Data.Dtos;
 using URLShortener.WebApi.Helpers;
-using URLShortener.WebApi.Models;
 using URLShortener.WebApi.Services;
 
 namespace URLShortener.WebApi.Controllers
