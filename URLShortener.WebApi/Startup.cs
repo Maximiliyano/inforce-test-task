@@ -33,6 +33,13 @@ public class Startup
         {
             opt.IdleTimeout = TimeSpan.FromMinutes(120);
         });
+        
+        /*
+        services.AddSpaStaticFiles(configuration =>
+        {
+            configuration.RootPath = "ClientApp/dist";
+        });
+        */
     }
     
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -45,6 +52,17 @@ public class Startup
         
         app.UseStaticFiles();
         // TODO connect angular
+        /*
+        app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+ 
+                if (env.IsDevelopment())
+                {
+                    spa.UseAngularCliServer(npmScript: "start");
+                }
+            });
+        */
 
         app.UseHttpsRedirection();
         app.UseCookiePolicy();
