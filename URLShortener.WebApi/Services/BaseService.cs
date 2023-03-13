@@ -9,7 +9,7 @@ public abstract class BaseService
     private protected readonly UrlDbContext _context;
     private protected readonly IMapper _mapper;
 
-    public BaseService(UrlDbContext context)
+    protected BaseService(UrlDbContext context)
     {
         _context = context;
         _mapper = MapperResolver.InitiateMapping();

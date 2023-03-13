@@ -14,7 +14,7 @@ public abstract class BaseEntity
     public DateTime CreatedAt
     {
         get => _createdAt;
-        set => _createdAt = (value == DateTime.MinValue) ? DateTime.Now : value;
+        set => _createdAt = value == DateTime.MinValue ? DateTime.Now : value;
     }
     
     public DateTime UpdatedAt { get; set; }

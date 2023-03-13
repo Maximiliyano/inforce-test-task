@@ -21,14 +21,4 @@
     <PackageReference Include="RestSharp" Version="109.0.0-preview.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\ShortUrlsTable\Index.cshtml" />
-    <_ContentIncludedByDefault Remove="Angular\angular.json" />
-    <_ContentIncludedByDefault Remove="Angular\package-lock.json" />
-    <_ContentIncludedByDefault Remove="Angular\package.json" />
-    <_ContentIncludedByDefault Remove="Angular\tsconfig.app.json" />
-    <_ContentIncludedByDefault Remove="Angular\tsconfig.json" />
-    <_ContentIncludedByDefault Remove="Angular\tsconfig.spec.json" />
-  </ItemGroup>
-
 </Project>

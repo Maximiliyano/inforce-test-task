@@ -1,32 +1,21 @@
-using AutoMapper;
 using FluentAssertions;
 using FluentAssertions.Execution;
-using Microsoft.EntityFrameworkCore;
+using URLShortener.Tests.Apis;
 using URLShortener.WebApi.Builders;
-using URLShortener.WebApi.Data;
 using URLShortener.WebApi.Data.Dtos;
-using URLShortener.WebApi.Extensions;
 using URLShortener.WebApi.Helpers;
 using URLShortener.WebApi.Services;
 
 namespace URLShortener.Tests.UnitTests;
 
-public class UserTests
+public class UserTests : AppBaseApi
 {
     private UserService _userService;
-    private IMapper _mapper;
-    private UrlDbContext _dbContext;
 
     [OneTimeSetUp]
     public async Task Init()
     {
-        var dbContextOptions = new DbContextOptionsBuilder<UrlDbContext>()
-            .UseInMemoryDatabase(databaseName: "URLShorterDB")
-            .Options;
-        
-        _dbContext = new UrlDbContext(dbContextOptions);
         _userService = new UserService(_dbContext);
-        _mapper = MapperResolver.InitiateMapping();
     }
 
     [OneTimeTearDown]

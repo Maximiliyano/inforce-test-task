@@ -1,6 +1,9 @@
-﻿namespace URLShortener.Tests.UnitTests;
+﻿using URLShortener.Tests.Apis;
 
-public class ShortUrlsTableTests // TODO write tests based on ShortUrlsTableService
+namespace URLShortener.Tests.UnitTests;
+
+// TODO write tests based: about, login, sign out
+public class ShortUrlsTableTests : AppBaseApi // TODO write tests based on ShortUrlsTableService
 {
     [OneTimeSetUp]
     public async Task Init()
